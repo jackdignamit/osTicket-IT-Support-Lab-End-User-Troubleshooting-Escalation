@@ -4,7 +4,6 @@
 *Completed: January 17, 2026*
 
 # Project Overview
-
 This project demonstrates hands-on **IT helpdesk** and **service desk skills** using **osTicket**, an open-source ticketing and support system widely used in enterprise IT environments. I walkthrough how to setup your environment with **Virtualbox virtual machines**, installing **XAMPP** for local web server hosting, deploying **osTicket** for technical support, and simulating real helpdesk scenarios such as ticket intake, troubleshooting, and escalation.
 
 ## Technologies & Tools Used
@@ -164,3 +163,4 @@ The assignment is assigned to the Senior Tier 2 Support, as opposed to the Tier 
 
 - - - 
 # Conclusion
+This osTicket IT support lab successfully replicates a real-world helpdesk environment by demonstrating a full support ticket lifecycle. Through the configuration process, I developed practical skills such as web server setup, database configuration, file permission management, and basic security hardening. The creation of agents, roles, departments, and teams strengthened my understanding of role-based access control, especially in enforcing least privelage, as well as general security administrative concepts. By utilizing ticket priorities and SLAs, the efficiency of ticket escalation, assessing issue severity, and managing response deadlines greatly increased. This project has made me way more comfortable and proficient in IT service management and general structured problem resolution.
