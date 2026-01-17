@@ -4,7 +4,7 @@
 *Completed: January 17, 2026*
 
 # Project Overview
-This project demonstrates hands-on **IT helpdesk** and **service desk skills** using **osTicket**, an open-source ticketing and support system widely used in enterprise IT environments. I walk through how to setup your environment with **Virtualbox virtual machines**, installing **XAMPP** for local web server hosting, deploying **osTicket** for technical support, and simulating real helpdesk scenarios such as ticket intake, troubleshooting, and escalation.
+This project demonstrates hands-on **IT helpdesk** and **technical support skills** using **osTicket**, an open-source ticketing and support system widely used in enterprise IT environments. I walk through how to setup your environment with **Virtualbox virtual machines**, installing **XAMPP** for local web server hosting, deploying **osTicket** for technical support, and simulating real helpdesk scenarios such as ticket intake, troubleshooting, and escalation.
 
 ## Technologies & Tools Used
 | Technology/Tool | Purpose | Link |
