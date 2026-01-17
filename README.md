@@ -16,20 +16,62 @@ This project demonstrates hands-on **IT helpdesk** and **service desk skills** u
 
 - - - 
 # 🔢 Step-by-Step Walkthrough 🔢
+## 1️⃣ Virtual Machine & XAMPP Installation
+1. Install [Virtualbox](https://www.virtualbox.org/) and create a Windows 10 or 11 virtual machine (VM). Alternatively, you can utilize a cloud-based VM service such as [Vultr](https://www.vultr.com/).
+   > NOTE: This step is optional, its just good practice to use a Virtual Machine in testing environments.
 
-## 1️⃣ Environment Setup
+2. Inside the VM, go to the official [XAMPP website](https://www.apachefriends.org/index.html) and click **Download for Windows**.
+   - Choose a **PHP 8.x version** (recommended for newer osTicket versions)
+   - During the installation process, make sure **Apache**, **MySQL**, **PHP**, and **phpMyAdmin** are **checked**. Everything else can remained unchecked.
+  
+3. Start **Apache and **MySQL** within the XAMPP Control Panel app. If successful, Apache and MySQL should turn green.
+
+4. Click start next to MySQL. The status change dialogue should list "**running**".
+
+<p align="center"> <img width="663" height="432" alt="Screenshot 2026-01-17 112859" src="https://github.com/user-attachments/assets/331bd5f2-c0f1-4f84-9336-b11d1bf99148"/></p>
+
+5. Verify MySQL and phpMyAdmin by visiting ```http://localhost/phpmyadmin``` on a web browser.
+
+<p align="center"> <img width="1834" height="884" alt="Screenshot 2026-01-17 112959" src="https://github.com/user-attachments/assets/08e2eb27-6b59-4e42-a75b-c0be159ee12d"/></p>
+
+6. From the admin dashboard, navigate to the **Databases** tab and create an osticket database.
+
+<p align="center"><img width="772" height="552" alt="Screenshot 2026-01-17 113839" src="https://github.com/user-attachments/assets/f637c49e-a444-4e54-9039-153a2d41dcae" /></p>
+
+7. Then, navigate to the **Users** tab and create a user named "**ostuser**" with all privelages granted to it. This will serve as the admin account for the MySQL database.
 
 - - - 
 
-## 2️⃣ XAMPP Apache Installation
+## 2️⃣ osTicket Installation
+1. Go to the official [osTicket website](https://osticket.com/) and click download on the latest stable version. Extract the downloaded ```.zip``` file.
+2. From the extracted ```.zip``` file, rename the folder titled "**upload**" to "**osticket**" and copy and paste it into the ```C:\xampp\htdocs``` directory.
+   - If you changed default download directory when installing osTicket, navigate to that directory instead.
+   
+<p align="center"><img width="1055" height="515" alt="Screenshot 2026-01-17 113606" src="https://github.com/user-attachments/assets/dc64805f-eaf9-4b88-876b-05dcd34d332e"/></p>
+
+3. Navigate to the ```C:\xampp\htdocs\osticket\include``` directory and rename the file titled "**ost-sampleconfig.php**" to "**ost-config.php**".
+
+4. Then, set the **User file permissions** within the ```ost-config.php``` file's properties settings to **Full Control**. Make sure you apply your configuration.
+
+<p align="center"><img width="1086" height="802" alt="Screenshot 2026-01-17 113710" src="https://github.com/user-attachments/assets/bf9f529f-7700-461a-91ca-e8ce4be1a608" /></p>
+
+5. Open your browser and go to ```http://localhost/osticket/setup``` to setup basic installation settings for osTicket. Make sure you remember your admin account's login credentials.
+    - Since this is a simulation of a helpdesk environment, you can use a fake email for the default email settings.
+
+<img width="811" height="1033" alt="Screenshot 2026-01-17 153144" src="https://github.com/user-attachments/assets/08fd6c67-bc33-466e-a848-85fcd2db7286" />
+
+6. Your osTicket installation is complete! Now that you have finished the setup, it is recommended to **disable** the **Full Control** you permitted **Users** on the ```ost-config.php``` file. You should also delete the setup folder located in ```C:\xampp\htdocs\osticket```.
 
 - - - 
 
-## 3️⃣ osTicket Installation
+## 3️⃣ osTicket Configuration
+Before we can begin ingesting ticket requests, we must configure the default settings of osTicket. We'll need to create agents & roles, departments, teams, ticket priorities & SLAs, and lastly a user portal for access. This will mirror a real Tier 1 / Tier 2 desk environment.
 
-- - - 
+1. Sign into the admin account you created during installation at ```http://localhost/osticket/scp```.
 
-## 4️⃣ System Configuration
+osTickets has two main plains for configuring and navigating its settings: the **Admin Panel** and the **Agent Panel**. 
+  - The **Admin panel** is designed for the system administrators who manage the overall configuration of the helpdesk system.
+  - The **Agent panel** is reserved for the actual support staff and agents who handle customer tickets.
 
 - - - 
 # Ticket Scenarios & Resolutions
