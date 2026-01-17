@@ -90,12 +90,41 @@ osTickets has two main modes for configuring and navigating its settings: the **
 
 <p align="center"><img width="953" height="470" alt="Screenshot 2026-01-17 121134" src="https://github.com/user-attachments/assets/ab1540a3-2ac3-41a7-b483-698d4233a723"/></p>
 
-6. Click on the `Teams` tab and create an Escalation team that is assigned only to the Tier 2 Support agent. Whenver a Tier 1 agent cannot resolve a ticket, they will escalate the ticket to the escalation team composed of Tier 2 Support agents.
+6. Click on the `Teams` tab and create an Escalation team that is assigned only to the Tier 2 Support agent. If a Tier 1 agent is unable to resolve a ticket, they will send the ticket to the escalation team composed of Tier 2 Support agents.
 
 <p align="center"><img width="956" height="261" alt="Screenshot 2026-01-17 121252" src="https://github.com/user-attachments/assets/5b1bdd3f-caec-4d5b-9376-99b375452a2b"/></p>
 
+7. Let's configure the priorities of tickets themselves. We need to categorize them according to their severity. Create **Low**, **Normal**, **High**, and **Emergency** ticket priorities under the ```Manage``` tab.
+
+8. On the same ```Manage``` tab, SLA plans of increasing severity should also be created. **Service Level Agreements (SLAs)** indicate the timeframe that a ticket must be resolved. Create three:
+   1. **Sev-A (Critical)**: 1 Hour Grace Period, scheduled 24/7
+   2. **Sev-B (Standard)**: 4 Hour Grace Period, scheduled for Business hours
+   3. **Sev-C (Low)**: 24 Hour Grace Period, scheduled for Business hours
+  
+9. Lastly, let's configure the User Portal itself. Under the settings tab in the Admin Panel, set all users to require registration when they want to submit tickets.
+
+**Your osTicket setup is finally complete! Now we can simulate realistic helpdesk ticket scenarios as practice.**
+
 - - - 
 # Ticket Scenarios & Resolutions
+## Scenario #1: Password Reset
+Let's start with a simple ticket scenario. A user, John Smith, submits a ticket using our osTicket portal and states that he has been locked out of his company email.
+
+<p align="center"><img width="833" height="864" alt="Screenshot 2026-01-17 122652" src="https://github.com/user-attachments/assets/ccf5790f-51a3-4ece-a84a-8eb10d94a8b3"/></p>
+<p align="center"><img width="822" height="351" alt="Screenshot 2026-01-17 122710" src="https://github.com/user-attachments/assets/e5c72d7a-1f69-4fab-9c37-38e9e988601a"/></p>
+
+On the **Agent panel** of osTicket, we see the ticket appear with an assigned priority level of **High**. As the Admin user, I'll assign this ticket to the Tier 1 Helpdesk agent.
+
+<p align="center"><img width="963" height="430" alt="Screenshot 2026-01-17 122741" src="https://github.com/user-attachments/assets/305d87a7-c6f8-45d8-b4ea-4168f0e486ae" /></p>
+<p align="center"><img width="981" height="859" alt="Screenshot 2026-01-17 123048" src="https://github.com/user-attachments/assets/c12331de-117a-4281-bb70-51643478e89f" /></p>
+
+The Tier 1 Helpdesk agent quickly resolves the case, informing the user they should reset their password when prompted on the login page. The agent finalizes the ticket by adding internal notes and setting the status to **Resolved**.
+
+- - - 
+## Scenario #2: Wi-Fi Not Connecting (Tier 1 -> Tier 2 Escalation)
+
+- - - 
+## Scenario #3: Blue Screen Error (Critical / SLA)
 
 - - - 
 # Future Enhancements
