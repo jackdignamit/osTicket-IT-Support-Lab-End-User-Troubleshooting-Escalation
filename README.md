@@ -58,20 +58,41 @@ This project demonstrates hands-on **IT helpdesk** and **service desk skills** u
 5. Open your browser and go to ```http://localhost/osticket/setup``` to setup basic installation settings for osTicket. Make sure you remember your admin account's login credentials.
     - Since this is a simulation of a helpdesk environment, you can use a fake email for the default email settings.
 
-<img width="811" height="1033" alt="Screenshot 2026-01-17 153144" src="https://github.com/user-attachments/assets/08fd6c67-bc33-466e-a848-85fcd2db7286" />
+<p align="center"><img width="811" height="1033" alt="Screenshot 2026-01-17 153144" src="https://github.com/user-attachments/assets/08fd6c67-bc33-466e-a848-85fcd2db7286" /></p>
 
 6. Your osTicket installation is complete! Now that you have finished the setup, it is recommended to **disable** the **Full Control** you permitted **Users** on the ```ost-config.php``` file. You should also delete the setup folder located in ```C:\xampp\htdocs\osticket```.
 
 - - - 
 
 ## 3️⃣ osTicket Configuration
-Before we can begin ingesting ticket requests, we must configure the default settings of osTicket. We'll need to create agents & roles, departments, teams, ticket priorities & SLAs, and lastly a user portal for access. This will mirror a real Tier 1 / Tier 2 desk environment.
+Before we can begin ingesting ticket requests, we must configure the default settings of osTicket. 
+We'll need to create agents & roles, departments, teams, ticket priorities & SLAs, and lastly a user portal for access. 
+This will mirror a real Tier 1 / Tier 2 desk environment.
 
 1. Sign into the admin account you created during installation at ```http://localhost/osticket/scp```.
 
-osTickets has two main plains for configuring and navigating its settings: the **Admin Panel** and the **Agent Panel**. 
-  - The **Admin panel** is designed for the system administrators who manage the overall configuration of the helpdesk system.
-  - The **Agent panel** is reserved for the actual support staff and agents who handle customer tickets.
+osTickets has two main modes for configuring and navigating its settings: the **Admin Panel** and the **Agent Panel**. You alternate between these modes by clicking their respective option in the top right of webpage.
+   - The **Admin panel** is designed for the system administrators who manage the overall configuration of the helpdesk system.
+   - The **Agent panel** is reserved for the actual support staff and agents who handle customer tickets.
+
+2. Under the **Admin panel**, click on the agent tabs and create an **IT Support**, **Networking**, and **Hardware department**. For each department, assign the admin as manager and leave everything else default.
+
+<p align="center"><img width="960" height="513" alt="Screenshot 2026-01-17 120048" src="https://github.com/user-attachments/assets/b1196e0b-57fc-452d-b85c-dfae09247016"/></p>
+
+3. Now that we have our departments, we'll need agents to utilize them. Let's create two agents, one for **Tier 1 Helpdesk**, and another for **Tier 2 Support**.
+   - The distinctive agent tiers will help us simulate ticket escalation when conducting ticket scenarios later.
+
+4. Add the **Tier 1 Helpdesk** to the **IT Support department** and set its role to **Limited Access**. For the **Tier 2 Support**, add it to the **Networking department** and assign **Expanded Access** privelages.
+
+<p align="center"><img width="958" height="395" alt="Screenshot 2026-01-17 120620" src="https://github.com/user-attachments/assets/b11e906b-b0f3-4784-be68-3ed02325307f"/></p>
+
+5. Click on the `Roles` tab and create a Tier 1 Support role with the ability to view, reply, and add internal notes to tickets. Create another role for Tier 2 Support that has full ticket access.
+
+<p align="center"><img width="953" height="470" alt="Screenshot 2026-01-17 121134" src="https://github.com/user-attachments/assets/ab1540a3-2ac3-41a7-b483-698d4233a723"/></p>
+
+6. Click on the `Teams` tab and create an Escalation team that is assigned only to the Tier 2 Support agent. Whenver a Tier 1 agent cannot resolve a ticket, they will escalate the ticket to the escalation team composed of Tier 2 Support agents.
+
+<p align="center"><img width="956" height="261" alt="Screenshot 2026-01-17 121252" src="https://github.com/user-attachments/assets/5b1bdd3f-caec-4d5b-9376-99b375452a2b"/></p>
 
 - - - 
 # Ticket Scenarios & Resolutions
