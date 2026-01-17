@@ -1,4 +1,6 @@
-# (WIP) osTicket IT Support Lab: End-User Troubleshooting & Escalation
+<p align="center"><img width="448" height="168" alt="image" src="https://github.com/user-attachments/assets/67a313d2-8c83-4886-a2fe-c5ce2f13a00a" /></p>
+
+# osTicket IT Support Lab: End-User Troubleshooting & Escalation
 *Completed: January 17, 2026*
 
 # Project Overview
@@ -122,9 +124,26 @@ The Tier 1 Helpdesk agent quickly resolves the case, informing the user they sho
 
 - - - 
 ## Scenario #2: Wi-Fi Not Connecting (Tier 1 -> Tier 2 Escalation)
+In this scenario, the Tier 1 Helpdesk agent will need to escalate a ticket to the escalation team. The escalation team, composed of Tier 2 Support, will resolve the issue and close the case.
+
+<p align="center"><img width="961" height="166" alt="Screenshot 2026-01-17 123319" src="https://github.com/user-attachments/assets/6001de33-21fb-4320-aefb-f0e31f14c32e" /></p>
+
+Jane Doe from HR submits a ticket stating she cannot reach the internet. A Tier 1 Agent attempts to assist her, but to **no avail**. The agent then **escalates** the case to the **escalation team** for further assistance.
+
+<p align="center"><img width="955" height="895" alt="Screenshot 2026-01-17 124827" src="https://github.com/user-attachments/assets/5453afc6-8902-4d77-ab7c-7d878ad70f9e" /></p>
+
+The Tier 2 Support responds to the escalated ticket and fixes Jane Doe's internet problem. Her DNS was misconfigured, disallowing her access to the internet. The Tier 2 Support resolves this and closes the case.
 
 - - - 
 ## Scenario #3: Blue Screen Error (Critical / SLA)
+The last scenario involves a ticket with a critical SLA status: repeated computer blue screening. This means the client cannot access their computer, disrupting business continuity.
+
+<p align="center"><img width="1066" height="214" alt="Screenshot 2026-01-17 164740" src="https://github.com/user-attachments/assets/6b2b7fc2-5c6a-40b6-96c3-7c3ed2e95b66" /></p>
+<p align="center"><img width="335" height="273" alt="Screenshot 2026-01-17 125143" src="https://github.com/user-attachments/assets/084072ab-5865-40c0-9203-d78707f245e7" /></p>
+
+The assignment is assigned to the Senior Tier 2 Support, as opposed to the Tier 1 Helpdesk, and has a due date within an hour because of the Sev-A status (critical). The Senior support team quickly discovers a solution and resolves the case.
+
+<img width="970" height="732" alt="Screenshot 2026-01-17 125216" src="https://github.com/user-attachments/assets/cd1fe69b-c482-44d3-bec7-5a87110ab882" />
 
 - - - 
 # Future Enhancements
